@@ -26,13 +26,13 @@ runs:
 
   steps:
     - name: Set up ${{ inputs.graalvm-distribution }} ${{ inputs.graalvm-version }} (Java ${{ inputs.java-version }})
+      id: setup
       uses: graalvm/setup-graalvm@v1
       with:
         cache: 'maven'
         distribution: ${{ inputs.graalvm-distribution }}
         java-version: ${{ inputs.java-version }}
         version: ${{ inputs.graalvm-version }}
-      id: setup
 
     - name: Populate Cache
       if: ${{ steps.setup.outputs.cache-hit != 'true' }}
