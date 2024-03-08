@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+    name="github-archetype"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+    <requiredProperty key="version">
+      <defaultValue>999-SNAPSHOT</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="gitUser">
+      <defaultValue>turing85</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="gitProject">
+      <defaultValue>${artifactId}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="gitSite">
+      <defaultValue>github.com</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+
+  <fileSets>
+    <fileSet encoding="UTF-8">
+      <directory>.mvn/wrapper</directory>
+      <includes>
+        <include>*</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory/>
+      <includes>
+        <include>.gitignore</include>
+        <include>.dockerignore</include>
+        <include>CONTRIBUTORS.md</include>
+        <include>google-style.xml</include>
+        <include>LICENSE</include>
+        <include>lombok.config</include>
+        <include>mvnw</include>
+        <include>mvnw.cmd</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory/>
+      <includes>
+        <include>.github/**/*</include>
+        <include>src/**</include>
+        <include>.all-contributorsrc</include>
+        <include>README.adoc</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/main/java/</directory>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/main/resources/</directory>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/test/java/</directory>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
