@@ -11,6 +11,7 @@
 
     <properties>
         <!-- Plugin versions -->
+        <assembly-plugin.version>3.7.0</assembly-plugin.version>
         <compiler-plugin.version>3.12.1</compiler-plugin.version>
         <dependency-check-maven.version>8.4.3</dependency-check-maven.version>
         <formatter-maven-plugin.version>2.23.0</formatter-maven-plugin.version>
@@ -29,6 +30,7 @@
         <truth.version>1.4.2</truth.version>
 
         <!-- Project setup -->
+        <assembly-plugin.skip>false</assembly-plugin.skip>
         <dependency-check-maven.goal>check</dependency-check-maven.goal>
         <dependency-check-maven.skip>true</dependency-check-maven.skip>
         <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
@@ -175,6 +177,28 @@
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${assembly-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>tar-gz</id>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>src/assembly/quarkus-app-tar-gz.xml</descriptor>
+                            </descriptors>
+                            <skipAssembly>${assembly-plugin.skip}</skipAssembly>
+                            <tarLongFileMode>posix</tarLongFileMode>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.owasp</groupId>
@@ -337,6 +361,7 @@
                 </property>
             </activation>
             <properties>
+                <assembly-plugin.skip>true</assembly-plugin.skip>
                 <quarkus.container-image.additional-tags>native</quarkus.container-image.additional-tags>
                 <quarkus.package.type>native</quarkus.package.type>
                 <skipITs>false</skipITs>
@@ -350,6 +375,7 @@
                 </property>
             </activation>
             <properties>
+                <assembly-plugin.skip>true</assembly-plugin.skip>
                 <quarkus.container-image.additional-tags>native</quarkus.container-image.additional-tags>
                 <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless-compressed</quarkus.docker.dockerfile-native-path>
                 <quarkus.package.type>native</quarkus.package.type>
