@@ -42,7 +42,7 @@
         <impsort-maven-plugin.goal>sort</impsort-maven-plugin.goal>
         <impsort-maven-plugin.skip>false</impsort-maven-plugin.skip>
 
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -51,7 +51,7 @@
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.0.3.0-Final-java17@sha256:93dadc36a153a9e4cf230ce9725d942d0524e3cb82701b7b0eff33c286aed58c</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.2.0-Final-java21@sha256:43077361ef0bf4439cc5c72fe05845d734aad599be9357f8170fe618756b43e6</quarkus.native.builder-image>
         <quarkus.native.container-build>true</quarkus.native.container-build>
 
         <skipITs>false</skipITs>
@@ -113,6 +113,7 @@
                 <artifactId>impsort-maven-plugin</artifactId>
                 <version>${impsort-maven-plugin.version}</version>
                 <configuration>
+                    <compliance>17</compliance>
                     <groups>java.,javax.,jakarta.,*</groups>
                     <lineEnding>LF</lineEnding>
                     <removeUnused>true</removeUnused>
