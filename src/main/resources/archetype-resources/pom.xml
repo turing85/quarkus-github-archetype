@@ -203,9 +203,6 @@
                                             <outputDirectory>/</outputDirectory>
                                             <directory>${project.build.directory}/quarkus-app</directory>
                                             <useDefaultExcludes>false</useDefaultExcludes>
-                                            <includes>
-                                                <include>**/*</include>
-                                            </includes>
                                         </fileSet>
                                     </fileSets>
                                 </inlineDescriptor>
