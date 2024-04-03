@@ -10,8 +10,12 @@
   <name>quarkus-github-archetype</name>
 
   <properties>
+    <!-- Plugin versions -->
     <archetype.version>3.2.1</archetype.version>
-    <maven.compiler.release>17</maven.compiler.release>
+    <resources-plugin.version>3.3.1</resources-plugin.version>
+
+    <!-- Plugin setup -->
+    <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -36,7 +40,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.1</version>
+          <version>${resources-plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
