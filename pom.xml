@@ -48,7 +48,7 @@
 
   <description>Archetype for github-based project.</description>
 
-  <url>https://github.com/turing85/pure</url>
+  <url>https://github.com/turing85/quarkus-github-archetype</url>
 
   <licenses>
     <license>
@@ -58,8 +58,8 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:ssh://github.com/turing85/pure.git</connection>
-    <developerConnection>scm:git:ssh://github.com/turing85/pure.git</developerConnection>
+    <connection>scm:git:ssh://github.com/turing85/quarkus-github-archetype.git</connection>
+    <developerConnection>scm:git:ssh://github.com/turing85/quarkus-github-archetype.git</developerConnection>
     <tag>@{project.version}</tag>
     <url>https://github.com/turing85/pure</url>
   </scm>
