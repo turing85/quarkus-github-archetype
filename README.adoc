@@ -1,0 +1,107 @@
+= Maven Github archetype
+
+An archetype to quickly bootstrap a multi module maven application with some github integration (mostply pipelining and preconfigured sonarcloud analysis).
+
+== Configuration
+
+The archetype requires the following default parameters:
+- `groupId`: the group id of the project
+- `artifactId`: the artifact id of the project. More on this further below
+- `version`: the initial version to use. It is recommended to ouse `999-SNAPSHOT` as initial and snapshot version. Otherwise, the `maven-release-plugin` configuration should be reconfigured.
+- `package`: unused
+
+In addtition, the project requires the following additional, custom parameters:
+- `projectUrl`: the homepage of the project
+- `gitSshUrl`: the git ssh URL, used by the maven release plugin to generate tags, branches, ... Should be of form `git:ssh://ssh-host/path/to/project.git`.
+- `gitSite`: a representation of the git repository used (e.g. "www.github.com" or "our-interna-git")
+- `sonarOrganziationKey`: the organization key for sonar
+- `sonarProjectKey`: the project key for sonar
+
+All custom parameters have a default value of `todo-define-later` if none is given.
+
+== Project structure
+Then a new project is boostrapped, the following project structure will be generated:
+
+[source]
+----
+<root>
+├── .github
+│   ├── actions
+│   │   ├── owasp-scan
+│   │   │   └── action.yml
+│   │   └── populate-cache
+│   │       └── action.yml
+│   ├── dependabot.yml
+│   └── workflows
+│       ├── build.yml
+│       └── nightly-cve-scan.yml
+├── .mvn
+│   └── wrapper
+│       ├── .gitignore
+│       └── maven-wrapper.properties
+├── src
+│   ├── main
+│   │   ├── container
+│   │   │   ├── Containerfile.native-distroless
+│   │   │   ├── Containerfile.native-distroless-compressed
+│   │   │   └── Containerfile.temurin
+│   │   ├── java
+│   │   └── resources
+│   └── test
+│       ├── java
+│       └── resources
+│           └── owasp-dependency-check.xml
+├── .all-contributorsrc
+├── CONTRIBUTORS.md
+├── .dockerignore
+├── .gitignore
+├── google-style.xml
+├── LICENSE.txt
+├── lombok.config
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── README.adoc
+----
+
+== Sample usage
+
+To bootstrap a project with this archetype, we can execute:
+
+[tabs]
+====
+`bash`::
++
+[source,bash]
+----
+$ mvn --batch-mode \
+    archetype:generate \
+    --define archetypeGroupId=de.turing85 \
+    --define archetypeArtifactId=github-archetype \
+    --define archetypeVersion=999-SNAPSHOT \
+    --define groupId=org.acme \
+    --define artifactId=road-runner \
+    --define version=999-SNAPSHOT \
+    --define projectUrl=https//project.home \
+    --define gitSshUrl=git:ssh://my-git.com/path/to/project.git \
+    --define sonarOrganizationKey=my-org-key \
+    --define sonarProjectKey=my-project-key
+----
+`cmd`::
++
+[source,cmd]
+----
+> mvn --batch-mode ^
+    archetype:generate ^
+    --define archetypeGroupId=de.turing85 ^
+    --define archetypeArtifactId=github-archetype ^
+    --define archetypeVersion=999-SNAPSHOT ^
+    --define groupId=org.acme ^
+    --define artifactId=road-runner ^
+    --define version=999-SNAPSHOT ^
+    --define projectUrl=https//project.home ^
+    --define gitSshUrl=git:ssh://my-git.com/path/to/project.git ^
+    --define sonarOrganizationKey=my-org-key ^
+    --define sonarProjectKey=my-project-key
+----
+====
