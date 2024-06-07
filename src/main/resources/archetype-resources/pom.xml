@@ -14,7 +14,7 @@
         <assembly-plugin.version>3.7.1</assembly-plugin.version>
         <compiler-plugin.version>3.13.0</compiler-plugin.version>
         <dependency-check-maven.version>9.2.0</dependency-check-maven.version>
-        <formatter-maven-plugin.version>2.23.0</formatter-maven-plugin.version>
+        <formatter-maven-plugin.version>2.24.1</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.10.0</impsort-maven-plugin.version>
         <surefire-plugin.version>3.2.5</surefire-plugin.version>
 
@@ -24,7 +24,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.10.2</quarkus.platform.version>
+        <quarkus.platform.version>3.11.1</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.2</truth.version>
