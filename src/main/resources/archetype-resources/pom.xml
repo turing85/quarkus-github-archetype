@@ -33,7 +33,9 @@
 
         <!-- Project setup -->
         <assembly-plugin.skip>false</assembly-plugin.skip>
+
         <attach-elf.skip>true</attach-elf.skip>
+
         <dependency-check-maven.skip>true</dependency-check-maven.skip>
         <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
 
@@ -45,8 +47,6 @@
 
         <impsort-maven-plugin.goal>sort</impsort-maven-plugin.goal>
         <impsort-maven-plugin.skip>false</impsort-maven-plugin.skip>
-
-        <maven.compiler.release>21</maven.compiler.release>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -149,6 +149,7 @@
                     </annotationProcessorPaths>
                     <parameters>true</parameters>
                     <proc>full</proc>
+                    <release>21</release>
                 </configuration>
             </plugin>
             <plugin>
