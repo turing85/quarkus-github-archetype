@@ -29,7 +29,7 @@
         <quarkus.platform.version>3.12.1</quarkus.platform.version>
 
         <!-- Test dependency versions -->
-        <truth.version>1.4.3</truth.version>
+        <truth.version>1.4.4</truth.version>
 
         <!-- Project setup -->
         <assembly-plugin.skip>false</assembly-plugin.skip>
