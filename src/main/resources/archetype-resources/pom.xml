@@ -36,6 +36,7 @@
 
         <attach-elf.skip>true</attach-elf.skip>
 
+        <dependency-check-maven.goal>check</dependency-check-maven.goal>
         <dependency-check-maven.skip>true</dependency-check-maven.skip>
         <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
 
@@ -195,7 +196,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>check</goal>
+                            <goal>${dependency-check-maven.goal}</goal>
                         </goals>
                         <phase>package</phase>
                     </execution>
@@ -398,7 +399,8 @@
                 </property>
             </activation>
             <properties>
-                <dependency-check-maven.skip>true</dependency-check-maven.skip>
+                <dependency-check-maven.skip>false</dependency-check-maven.skip>
+                <dependency-check-maven.goal>update-only</dependency-check-maven.goal>
                 <formatter-maven-plugin.skip>true</formatter-maven-plugin.skip>
                 <impsort-maven-plugin.skip>true</impsort-maven-plugin.skip>
             </properties>
