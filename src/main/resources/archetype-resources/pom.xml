@@ -65,6 +65,8 @@
         <quarkus.native.container-build>true</quarkus.native.container-build>
         <quarkus.package.jar.add-runner-suffix>false</quarkus.package.jar.add-runner-suffix>
 
+        <surefire-plugin.skip>false</surefire-plugin.skip>
+
         <skipITs>false</skipITs>
     </properties>
 
@@ -396,11 +398,14 @@
                 </property>
             </activation>
             <properties>
+                <assembly-plugin.skip>true</assembly-plugin.skip>
+                <attach-elf.skip>false</attach-elf.skip>
                 <formatter-maven-plugin.skip>true</formatter-maven-plugin.skip>
                 <impsort-maven-plugin.skip>true</impsort-maven-plugin.skip>
                 <quarkus.container-image.additional-tags>native</quarkus.container-image.additional-tags>
                 <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless-compressed</quarkus.docker.dockerfile-native-path>
                 <quarkus.native.enabled>true</quarkus.native.enabled>
+                <quarkus.package.jar.add-runner-suffix>true</quarkus.package.jar.add-runner-suffix>
                 <surefire-plugin.skip>true</surefire-plugin.skip>
             </properties>
         </profile>
