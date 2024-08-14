@@ -66,8 +66,6 @@
         <quarkus.package.jar.add-runner-suffix>false</quarkus.package.jar.add-runner-suffix>
 
         <surefire-plugin.skip>false</surefire-plugin.skip>
-
-        <skipITs>false</skipITs>
     </properties>
 
     <url>https://github.com/${gitUser}/${gitProject}</url>
@@ -211,7 +209,7 @@
                 <version>${surefire-plugin.version}</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <native.image.path>${project.build.directory}/${project.build.finalName}</native.image.path>
+                        <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
                     </systemPropertyVariables>
@@ -452,7 +450,6 @@
                 <quarkus.container-image.additional-tags>native</quarkus.container-image.additional-tags>
                 <quarkus.native.enabled>true</quarkus.native.enabled>
                 <quarkus.package.jar.add-runner-suffix>true</quarkus.package.jar.add-runner-suffix>
-                <skipITs>false</skipITs>
             </properties>
         </profile>
         <profile>
