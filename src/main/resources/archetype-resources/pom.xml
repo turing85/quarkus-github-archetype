@@ -202,7 +202,6 @@
                         <phase>package</phase>
                         <configuration>
                             <appendAssemblyId>true</appendAssemblyId>
-                            <finalName>elf</finalName>
                             <inlineDescriptors>
                                 <inlineDescriptor>
                                     <id>elf</id>
