@@ -1,4 +1,4 @@
-ARG TEMURIN_IMAGE="docker.io/eclipse-temurin:21.0.4_7-jre-alpine@sha256:8cc1202a100e72f6e91bf05ab274b373a5def789ab6d9e3e293a61236662ac27"
+ARG TEMURIN_IMAGE="docker.io/eclipse-temurin:21.0.5_11-jre-alpine@sha256:2a0bbb1db6d8db42c66ed00c43d954cf458066cc37be12b55144781da7864fdf"
 
 FROM ${TEMURIN_IMAGE} as runner
 ARG APP_DIR=/deployment
