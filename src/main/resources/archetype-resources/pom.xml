@@ -14,19 +14,19 @@
         <!-- Plugin versions -->
         <assembly-plugin.version>3.7.1</assembly-plugin.version>
         <compiler-plugin.version>3.13.0</compiler-plugin.version>
-        <dependency-check-maven.version>11.1.0</dependency-check-maven.version>
+        <dependency-check-maven.version>11.1.1</dependency-check-maven.version>
         <formatter-maven-plugin.version>2.24.1</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
         <source-plugin.version>3.3.1</source-plugin.version>
         <surefire-plugin.version>3.5.2</surefire-plugin.version>
 
         <!-- Dependency versions -->
-        <lombok.version>1.18.34</lombok.version>
+        <lombok.version>1.18.36</lombok.version>
 
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.16.3</quarkus.platform.version>
+        <quarkus.platform.version>3.17.4</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.4</truth.version>

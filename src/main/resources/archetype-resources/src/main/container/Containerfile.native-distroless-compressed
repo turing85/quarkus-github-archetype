@@ -1,10 +1,10 @@
-ARG COMPRESSOR_IMAGE="docker.io/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a"
-ARG DISTROLESS_IMAGE="quay.io/quarkus/quarkus-distroless-image:2.0-2024-11-10@sha256:30fee20af069e962650daead049a9750af2d62fad509ad86939894718f4447c1"
+ARG COMPRESSOR_IMAGE="docker.io/alpine:3.21.0@sha256:21dc6063fd678b478f57c0e13f47560d0ea4eeba26dfc947b2a4f81f686b9f45"
+ARG DISTROLESS_IMAGE="quay.io/quarkus/quarkus-distroless-image:2.0-2024-12-15@sha256:3c06edcc4591c59ffe73a72eb252b8029933d17495fedadb7736c9948d3332dc"
 
 FROM ${COMPRESSOR_IMAGE} AS compressor
 ARG UPX_INSTALLATION_COMMAND="apk add \
-    libgcc=13.2.1_git20240309-r0 \
-    libstdc++=13.2.1_git20240309-r0 \
+    libgcc=14.2.0-r4 \
+    libstdc++=14.2.0-r4 \
     upx=4.2.4-r0 \
   && rm -rf /var/cache/apt/*"
 ARG UPX_COMPRESSION_MODE="--fast"
