@@ -39,6 +39,8 @@
         <dependency-check-maven.skip>true</dependency-check-maven.skip>
         <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
 
+        <failsafe-plugin.skip>false</failsafe-plugin.skip>
+
         <formatter-maven-plugin.goal>format</formatter-maven-plugin.goal>
         <formatter-maven-plugin.skip>false</formatter-maven-plugin.skip>
 
@@ -245,6 +247,7 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>${surefire-plugin.version}</version>
                 <configuration>
+                    <skip>${failsafe-plugin.skip}</skip>
                     <systemPropertyVariables>
                         <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
@@ -484,6 +487,17 @@
             </properties>
         </profile>
         <profile>
+            <id>skip-failsafe</id>
+            <activation>
+                <property>
+                    <name>skip-failsafe</name>
+                </property>
+            </activation>
+            <properties>
+                <failsafe-plugin.skip>true</failsafe-plugin.skip>
+            </properties>
+        </profile>
+        <profile>
             <id>skip-format</id>
             <activation>
                 <property>
@@ -493,6 +507,17 @@
             <properties>
                 <formatter-maven-plugin.skip>true</formatter-maven-plugin.skip>
                 <impsort-maven-plugin.skip>true</impsort-maven-plugin.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>skip-surefire</id>
+            <activation>
+                <property>
+                    <name>skip-surefire</name>
+                </property>
+            </activation>
+            <properties>
+                <surefire-plugin.skip>true</surefire-plugin.skip>
             </properties>
         </profile>
     </profiles>
