@@ -101,6 +101,7 @@
 
     <build>
         <plugins>
+            <!-- phase: validate -->
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
@@ -140,6 +141,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- phase: compile -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -163,6 +166,22 @@
                 </executions>
                 <extensions>true</extensions>
             </plugin>
+
+            <!-- phase: test -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire-plugin.version}</version>
+                <configuration>
+                    <skip>${surefire-plugin.skip}</skip>
+                    <systemPropertyVariables>
+                        <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                        <maven.home>${maven.home}</maven.home>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+
+            <!-- phase: package -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -230,18 +249,8 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire-plugin.version}</version>
-                <configuration>
-                    <skip>${surefire-plugin.skip}</skip>
-                    <systemPropertyVariables>
-                        <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                        <maven.home>${maven.home}</maven.home>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
+
+            <!-- phase: verify -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -320,24 +329,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Logging dependencies -->
-        <dependency>
-            <groupId>org.jboss.logging</groupId>
-            <artifactId>commons-logging-jboss-logging</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.logmanager</groupId>
-            <artifactId>log4j-jboss-logmanager</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.logmanager</groupId>
-            <artifactId>log4j2-jboss-logmanager</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.slf4j</groupId>
-            <artifactId>slf4j-jboss-logmanager</artifactId>
-        </dependency>
-
         <!-- Quarkus dependencies -->
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -378,6 +369,19 @@
                 <quarkus.container-image.tag>latest</quarkus.container-image.tag>
             </properties>
         </profile>
+        <profile>
+            <id>owasp</id>
+            <activation>
+                <property>
+                    <name>owasp</name>
+                </property>
+            </activation>
+            <properties>
+                <dependency-check-maven.skip>false</dependency-check-maven.skip>
+            </properties>
+        </profile>
+
+        <!-- ci-profiles -->
         <profile>
             <id>ci</id>
             <activation>
@@ -444,6 +448,8 @@
                 <impsort-maven-plugin.skip>true</impsort-maven-plugin.skip>
             </properties>
         </profile>
+
+        <!-- native profiles -->
         <profile>
             <id>native</id>
             <activation>
@@ -475,17 +481,8 @@
                 <quarkus.package.jar.add-runner-suffix>true</quarkus.package.jar.add-runner-suffix>
             </properties>
         </profile>
-        <profile>
-            <id>owasp</id>
-            <activation>
-                <property>
-                    <name>owasp</name>
-                </property>
-            </activation>
-            <properties>
-                <dependency-check-maven.skip>false</dependency-check-maven.skip>
-            </properties>
-        </profile>
+
+        <!-- skip profiles -->
         <profile>
             <id>skip-failsafe</id>
             <activation>
