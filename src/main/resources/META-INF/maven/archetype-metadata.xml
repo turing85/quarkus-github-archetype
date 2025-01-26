@@ -30,6 +30,7 @@
       <includes>
         <include>.gitignore</include>
         <include>.dockerignore</include>
+        <include>.mvn/jvm.config</include>
         <include>CONTRIBUTORS.md</include>
         <include>google-style.xml</include>
         <include>LICENSE</include>
