@@ -13,12 +13,18 @@
     <properties>
         <!-- Plugin versions -->
         <assembly-plugin.version>3.7.1</assembly-plugin.version>
+        <clean-plugin.version>3.4.0</clean-plugin.version>
         <compiler-plugin.version>3.13.0</compiler-plugin.version>
         <dependency-check-maven.version>12.0.2</dependency-check-maven.version>
+        <deploy-plugin.version>3.1.3</deploy-plugin.version>
         <error-prone.version>2.36.0</error-prone.version>
         <formatter-maven-plugin.version>2.24.1</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
+        <install-plugin.version>3.1.3</install-plugin.version>
+        <jar-plugin.version>3.4.2</jar-plugin.version>
         <nullaway.version>0.12.3</nullaway.version>
+        <resources-plugin.version>3.3.1</resources-plugin.version>
+        <site-plugin.version>3.21.0</site-plugin.version>
         <source-plugin.version>3.3.1</source-plugin.version>
         <surefire-plugin.version>3.5.2</surefire-plugin.version>
 
@@ -105,6 +111,12 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${clean-plugin.version}</version>
+            </plugin>
+
             <!-- phase: validate -->
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
@@ -147,6 +159,11 @@
             </plugin>
 
             <!-- phase: compile -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${resources-plugin.version}</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -210,6 +227,11 @@
             </plugin>
 
             <!-- phase: package -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${jar-plugin.version}</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -333,6 +355,27 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- phase: install -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>${install-plugin.version}</version>
+            </plugin>
+
+            <!-- phase: deploy -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${deploy-plugin.version}</version>
+            </plugin>
+
+            <!-- phase: site -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${site-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
