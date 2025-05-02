@@ -17,12 +17,12 @@
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
         <dependency-check-maven.version>12.1.1</dependency-check-maven.version>
         <deploy-plugin.version>3.1.4</deploy-plugin.version>
-        <error-prone.version>2.37.0</error-prone.version>
+        <error-prone.version>2.38.0</error-prone.version>
         <formatter-maven-plugin.version>2.26.0</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
         <install-plugin.version>3.1.4</install-plugin.version>
         <jar-plugin.version>3.4.2</jar-plugin.version>
-        <nullaway.version>0.12.6</nullaway.version>
+        <nullaway.version>0.12.7</nullaway.version>
         <resources-plugin.version>3.3.1</resources-plugin.version>
         <site-plugin.version>3.21.0</site-plugin.version>
         <source-plugin.version>3.3.1</source-plugin.version>
@@ -35,7 +35,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.21.2</quarkus.platform.version>
+        <quarkus.platform.version>3.22.1</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.4</truth.version>
@@ -71,7 +71,7 @@
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.6.0-Final-java21-2025-04-06@sha256:b6675e4757ad4ec8fa9d9ef50b9b733293c35dd7a695c1efd9a7329d5ee6843c</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.7.0-Final-java21-2025-04-28@sha256:a4bbc2b1a3482fe2e1527c14e3cb038af3be92d2e1eecf18d0dfb7695335bd81</quarkus.native.builder-image>
         <quarkus.native.container-build>true</quarkus.native.container-build>
         <quarkus.package.jar.add-runner-suffix>false</quarkus.package.jar.add-runner-suffix>
 
