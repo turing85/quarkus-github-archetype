@@ -1,4 +1,4 @@
-ARG DISTROLESS_IMAGE="quay.io/quarkus/quarkus-distroless-image:2.0-2025-04-28@sha256:61822c41290e135198e7e612b05815a7110f7c22ac29cf444de0e243b6ba144b"
+ARG DISTROLESS_IMAGE="quay.io/quarkus/quarkus-distroless-image:2.0-2025-05-18@sha256:c63cc63b1d29ccba625b9bd5bc266b534ab125db615996138eb811217a74809a"
 
 FROM ${DISTROLESS_IMAGE} as runner
 ARG APP_DIR=/deployment
