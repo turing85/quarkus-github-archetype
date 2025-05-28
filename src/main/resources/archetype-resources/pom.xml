@@ -35,7 +35,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.22.3</quarkus.platform.version>
+        <quarkus.platform.version>3.23.0</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.4</truth.version>
@@ -71,7 +71,7 @@
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.7.0-Final-java21-2025-05-11@sha256:072fd4c80effec44ef93bbf3dff04df972fa82a51f98bd4bee9b37b33793dce0</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.7.0-Final-java21-2025-05-25@sha256:4300e3d0d005323e9bfd786868ac3d69b2dbed480b7a821b49d869d355c262bd</quarkus.native.builder-image>
         <quarkus.native.container-build>true</quarkus.native.container-build>
         <quarkus.package.jar.add-runner-suffix>false</quarkus.package.jar.add-runner-suffix>
 
