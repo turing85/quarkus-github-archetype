@@ -13,7 +13,7 @@
     <properties>
         <!-- Plugin versions -->
         <assembly-plugin.version>3.7.1</assembly-plugin.version>
-        <clean-plugin.version>3.4.1</clean-plugin.version>
+        <clean-plugin.version>3.5.0</clean-plugin.version>
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
         <dependency-check-maven.version>12.1.1</dependency-check-maven.version>
         <deploy-plugin.version>3.1.4</deploy-plugin.version>
