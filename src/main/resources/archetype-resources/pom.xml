@@ -17,6 +17,7 @@
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
         <dependency-check-maven.version>12.1.3</dependency-check-maven.version>
         <deploy-plugin.version>3.1.4</deploy-plugin.version>
+        <enforcer-plugin.version>3.5.0</enforcer-plugin.version>
         <error-prone.version>2.38.0</error-prone.version>
         <formatter-maven-plugin.version>2.26.0</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
@@ -48,6 +49,8 @@
         <dependency-check-maven.skip>true</dependency-check-maven.skip>
         <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
 
+        <enforcer-plugin.skip>false</enforcer-plugin.skip>
+
         <failsafe-plugin.skip>false</failsafe-plugin.skip>
 
         <formatter-maven-plugin.goal>format</formatter-maven-plugin.goal>
@@ -62,6 +65,7 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <maven.compiler.proc>full</maven.compiler.proc>
         <maven.compiler.release>21</maven.compiler.release>
+        <maven.version>${mavenVersion}</maven.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -118,6 +122,61 @@
             </plugin>
 
             <!-- phase: validate -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${enforcer-plugin.version}</version>
+                <configuration>
+                    <fail>true</fail>
+                    <rules>
+                        <banDependencyManagementScope/>
+                        <banDuplicatePomDependencyVersions/>
+                        <banDynamicVersions>
+                            <excludedScopes>test</excludedScopes>
+                        </banDynamicVersions>
+                        <bannedPlugins>
+                            <excludes>
+                                <exclude>org.apache.maven.plugins:maven-antrun-plugin</exclude>
+                            </excludes>
+                        </bannedPlugins>
+                        <dependencyConvergence/>
+                        <requireJavaVersion>
+                            <version>21</version>
+                        </requireJavaVersion>
+                        <requireMavenVersion>
+                            <version>${maven.version}</version>
+                        </requireMavenVersion>
+                        <requireSameVersions>
+                            <message>surefire and failsafe should use the same version</message>
+                            <buildPlugins>
+                                <plugin>org.apache.maven.plugins:maven-surefire-plugin</plugin>
+                                <plugin>org.apache.maven.plugins:maven-failsafe-plugin</plugin>
+                            </buildPlugins>
+                            <reportPlugins>
+                                <plugin>org.apache.maven.plugins:maven-surefire-report-plugin</plugin>
+                            </reportPlugins>
+                        </requireSameVersions>
+                        <requireSameVersions>
+                            <message>quarkus dependencies and quarkus plugin should use the same version</message>
+                            <buildPlugins>
+                                <plugin>${quarkus.platform.group-id}:quarkus-maven-plugin</plugin>
+                            </buildPlugins>
+                            <dependencies>
+                                <dependency>io.quarkus:quarkus-core</dependency>
+                            </dependencies>
+                        </requireSameVersions>
+                    </rules>
+                    <skip>${enforcer-plugin.skip}</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
@@ -573,6 +632,17 @@
             </activation>
             <properties>
                 <quarkus.cyclonedx.skip>true</quarkus.cyclonedx.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>skip-enforcer</id>
+            <activation>
+                <property>
+                    <name>skip-enforcer</name>
+                </property>
+            </activation>
+            <properties>
+                <enforcer-plugin.skip>true</enforcer-plugin.skip>
             </properties>
         </profile>
         <profile>

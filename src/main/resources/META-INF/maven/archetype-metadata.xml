@@ -16,9 +16,22 @@
     <requiredProperty key="gitSite">
       <defaultValue>github.com</defaultValue>
     </requiredProperty>
+    <requiredProperty key="mavenVersion">
+      <defaultValue>3.9.10</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 
   <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory/>
+      <includes>
+        <include>.github/**/*</include>
+        <include>.mvn/wrapper/maven-wrapper.properties</include>
+        <include>src/**</include>
+        <include>.all-contributorsrc</include>
+        <include>README.adoc</include>
+      </includes>
+    </fileSet>
     <fileSet encoding="UTF-8">
       <directory>.mvn/wrapper</directory>
       <includes>
@@ -37,15 +50,6 @@
         <include>lombok.config</include>
         <include>mvnw</include>
         <include>mvnw.cmd</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory/>
-      <includes>
-        <include>.github/**/*</include>
-        <include>src/**</include>
-        <include>.all-contributorsrc</include>
-        <include>README.adoc</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
