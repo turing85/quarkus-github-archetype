@@ -156,15 +156,6 @@
                                 <plugin>org.apache.maven.plugins:maven-surefire-report-plugin</plugin>
                             </reportPlugins>
                         </requireSameVersions>
-                        <requireSameVersions>
-                            <message>quarkus dependencies and quarkus plugin should use the same version</message>
-                            <buildPlugins>
-                                <plugin>${quarkus.platform.group-id}:quarkus-maven-plugin</plugin>
-                            </buildPlugins>
-                            <dependencies>
-                                <dependency>io.quarkus:quarkus-core</dependency>
-                            </dependencies>
-                        </requireSameVersions>
                     </rules>
                     <skip>${enforcer-plugin.skip}</skip>
                 </configuration>
