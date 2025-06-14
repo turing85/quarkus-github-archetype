@@ -37,6 +37,9 @@
       <includes>
         <include>*</include>
       </includes>
+      <excludes>
+        <exclude>maven-wrapper.properties</exclude>
+      </excludes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory/>
