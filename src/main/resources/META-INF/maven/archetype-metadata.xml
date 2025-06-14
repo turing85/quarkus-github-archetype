@@ -2,7 +2,8 @@
 <archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
     name="github-archetype"
     xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    partial="true">
   <requiredProperties>
     <requiredProperty key="version">
       <defaultValue>999-SNAPSHOT</defaultValue>
