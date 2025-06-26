@@ -20,7 +20,7 @@
         <enforcer-plugin.version>3.5.0</enforcer-plugin.version>
         <error-prone.version>2.39.0</error-prone.version>
         <extra-enforcer-rules.version>1.10.0</extra-enforcer-rules.version>
-        <formatter-maven-plugin.version>2.26.0</formatter-maven-plugin.version>
+        <formatter-maven-plugin.version>2.27.0</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
         <install-plugin.version>3.1.4</install-plugin.version>
         <jar-plugin.version>3.4.2</jar-plugin.version>
@@ -37,7 +37,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.23.4</quarkus.platform.version>
+        <quarkus.platform.version>3.24.1</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.4</truth.version>
