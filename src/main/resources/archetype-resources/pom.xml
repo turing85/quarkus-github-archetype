@@ -603,8 +603,10 @@
                 <impsort-maven-plugin.skip>true</impsort-maven-plugin.skip>
                 <quarkus.container-image.additional-tags>native</quarkus.container-image.additional-tags>
                 <quarkus.cyclonedx.skip>true</quarkus.cyclonedx.skip>
-                <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless-compressed</quarkus.docker.dockerfile-native-path>
                 <quarkus.native.enabled>true</quarkus.native.enabled>
+                <quarkus.native.compression.container-build>true</quarkus.native.compression.container-build>
+                <quarkus.native.compression.enabled>true</quarkus.native.compression.enabled>
+                <quarkus.native.compression.level>5</quarkus.native.compression.level>
                 <quarkus.package.jar.add-runner-suffix>true</quarkus.package.jar.add-runner-suffix>
                 <source-plugin.skip>true</source-plugin.skip>
                 <surefire-plugin.skip>true</surefire-plugin.skip>
@@ -676,8 +678,10 @@
                 <attach-fast-jar.skip>true</attach-fast-jar.skip>
                 <quarkus.container-image.additional-tags>native</quarkus.container-image.additional-tags>
                 <quarkus.cyclonedx.skip>true</quarkus.cyclonedx.skip>
-                <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless-compressed</quarkus.docker.dockerfile-native-path>
                 <quarkus.native.enabled>true</quarkus.native.enabled>
+                <quarkus.native.compression.container-build>true</quarkus.native.compression.container-build>
+                <quarkus.native.compression.enabled>true</quarkus.native.compression.enabled>
+                <quarkus.native.compression.level>5</quarkus.native.compression.level>
                 <quarkus.package.jar.add-runner-suffix>true</quarkus.package.jar.add-runner-suffix>
                 <source-plugin.skip>true</source-plugin.skip>
             </properties>
