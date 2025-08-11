@@ -47,9 +47,9 @@
         <attach-elf.skip>true</attach-elf.skip>
         <attach-fast-jar.skip>false</attach-fast-jar.skip>
 
+        <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
         <dependency-check-maven.goal>check</dependency-check-maven.goal>
         <dependency-check-maven.skip>true</dependency-check-maven.skip>
-        <dependency-check-maven.formats>html,junit</dependency-check-maven.formats>
 
         <enforcer-plugin.skip>false</enforcer-plugin.skip>
 
