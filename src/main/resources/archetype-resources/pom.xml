@@ -25,7 +25,7 @@
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
         <install-plugin.version>3.1.4</install-plugin.version>
         <jar-plugin.version>3.4.2</jar-plugin.version>
-        <nullaway.version>0.12.10</nullaway.version>
+        <nullaway.version>0.12.11</nullaway.version>
         <resources-plugin.version>3.3.1</resources-plugin.version>
         <site-plugin.version>3.21.0</site-plugin.version>
         <source-plugin.version>3.3.1</source-plugin.version>
@@ -38,7 +38,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.28.5</quarkus.platform.version>
+        <quarkus.platform.version>3.29.0</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.5</truth.version>
