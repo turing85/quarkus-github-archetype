@@ -19,13 +19,13 @@
         <dependency-check-maven.version>12.1.8</dependency-check-maven.version>
         <deploy-plugin.version>3.1.4</deploy-plugin.version>
         <enforcer-plugin.version>3.6.2</enforcer-plugin.version>
-        <error-prone.version>2.43.0</error-prone.version>
+        <error-prone.version>2.44.0</error-prone.version>
         <extra-enforcer-rules.version>1.11.0</extra-enforcer-rules.version>
         <formatter-maven-plugin.version>2.29.0</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
         <install-plugin.version>3.1.4</install-plugin.version>
         <jar-plugin.version>3.4.2</jar-plugin.version>
-        <nullaway.version>0.12.11</nullaway.version>
+        <nullaway.version>0.12.12</nullaway.version>
         <resources-plugin.version>3.3.1</resources-plugin.version>
         <site-plugin.version>3.21.0</site-plugin.version>
         <source-plugin.version>3.3.1</source-plugin.version>
@@ -38,7 +38,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.29.0</quarkus.platform.version>
+        <quarkus.platform.version>3.29.1</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.5</truth.version>
@@ -78,7 +78,7 @@
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.8.0-Final-java21-2025-09-29@sha256:734bbdfa421682430d41b83db5736175e72f3f914a51eefdbfa21b6c51ae7550</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.9.0-Final-java21-2025-11-05@sha256:1049fcb3ec68d3fabf91649781c8b3aab2327b831025d6cbd1a385daeb8db296</quarkus.native.builder-image>
         <quarkus.native.builder-image.pull>missing</quarkus.native.builder-image.pull>
         <quarkus.native.compression.container-build>true</quarkus.native.compression.container-build>
         <quarkus.native.compression.enabled>false</quarkus.native.compression.enabled>
