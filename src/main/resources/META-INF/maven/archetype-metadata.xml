@@ -18,7 +18,7 @@
       <defaultValue>github.com</defaultValue>
     </requiredProperty>
     <requiredProperty key="mavenVersion">
-      <defaultValue>3.9.11</defaultValue>
+      <defaultValue>3.9.12</defaultValue>
     </requiredProperty>
   </requiredProperties>
 
