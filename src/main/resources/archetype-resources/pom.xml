@@ -14,7 +14,7 @@
         <!-- Plugin versions -->
         <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
         <dependency-check-maven.version>12.1.9</dependency-check-maven.version>
-        <error-prone.version>2.45.0</error-prone.version>
+        <error-prone.version>2.46.0</error-prone.version>
         <extra-enforcer-rules.version>1.11.0</extra-enforcer-rules.version>
         <formatter-maven-plugin.version>2.29.0</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.12.0</impsort-maven-plugin.version>
@@ -38,7 +38,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.30.5</quarkus.platform.version>
+        <quarkus.platform.version>3.30.6</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.5</truth.version>
@@ -79,7 +79,7 @@
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.9.0-Final-java21-2025-11-30@sha256:ae40efdef3edcb2ab86b5ee5661552a7946cab7ee15170bce3ae76a1494feffc</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:23.1.9.0-Final-java21-2026-01-04@sha256:d2004da1c34831c332f6e71887a288d0389c88543c3a2ad1967a41741c63c7f0</quarkus.native.builder-image>
         <quarkus.native.builder-image.pull>missing</quarkus.native.builder-image.pull>
         <quarkus.native.compression.container-build>true</quarkus.native.compression.container-build>
         <quarkus.native.compression.enabled>false</quarkus.native.compression.enabled>
@@ -248,6 +248,7 @@
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
+                        <arg>-XDaddTypeAnnotationsToSymbol=true</arg>
                         <arg>-XDcompilePolicy=simple</arg>
                         <arg>--should-stop=ifError=FLOW</arg>
                         <arg>-Xplugin:ErrorProne -XepOpt:NullAway:AnnotatedPackages=de.turing85</arg>
