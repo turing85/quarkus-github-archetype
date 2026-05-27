@@ -38,7 +38,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.35.4</quarkus.platform.version>
+        <quarkus.platform.version>3.36.0</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.5</truth.version>
@@ -79,7 +79,7 @@
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:25.0.2.0-Final-java25-2026-04-26@sha256:fdd7b2478919480bb583a929a15fbd36a7874e7dde758c2fde918433ceb49eca</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:25.0.3.0-Final-java25-2026-05-24@sha256:80255d907dcedc1391c1c644479c0f980f39c86e5b76fd0203af5596bff6ea7e</quarkus.native.builder-image>
         <quarkus.native.builder-image.pull>missing</quarkus.native.builder-image.pull>
         <quarkus.native.compression.container-build>true</quarkus.native.compression.container-build>
         <quarkus.native.compression.enabled>false</quarkus.native.compression.enabled>
