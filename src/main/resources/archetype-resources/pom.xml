@@ -13,7 +13,7 @@
     <properties>
         <!-- Plugin versions -->
         <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
-        <dependency-check-maven.version>12.2.2</dependency-check-maven.version>
+        <dependency-check-maven.version>13.0.0</dependency-check-maven.version>
         <error-prone.version>2.50.0</error-prone.version>
         <extra-enforcer-rules.version>1.12.0</extra-enforcer-rules.version>
         <formatter-maven-plugin.version>2.29.0</formatter-maven-plugin.version>
@@ -37,7 +37,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.37.4</quarkus.platform.version>
+        <quarkus.platform.version>3.38.1</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.5</truth.version>
@@ -78,7 +78,7 @@
         <quarkus.docker.dockerfile-jvm-path>src/main/container/Containerfile.temurin</quarkus.docker.dockerfile-jvm-path>
         <quarkus.docker.dockerfile-native-path>src/main/container/Containerfile.native-distroless</quarkus.docker.dockerfile-native-path>
         <quarkus-maven-plugin.skip>false</quarkus-maven-plugin.skip>
-        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:25.0.3.0-Final-java25-2026-07-19@sha256:56643456be9342caca07e2a31a68654bce293d1f957477a25532bf319c352ceb</quarkus.native.builder-image>
+        <quarkus.native.builder-image>quay.io/quarkus/ubi-quarkus-mandrel-builder-image:25.0.4.0-Final-java25-2026-08-06@sha256:c107a60886e262808ff8d891b295c3ba2c387d6eda90f51f8dde5b97b59b5f8b</quarkus.native.builder-image>
         <quarkus.native.builder-image.pull>missing</quarkus.native.builder-image.pull>
         <quarkus.native.compression.container-build>true</quarkus.native.compression.container-build>
         <quarkus.native.compression.enabled>false</quarkus.native.compression.enabled>
