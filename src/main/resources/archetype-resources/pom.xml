@@ -14,7 +14,7 @@
         <!-- Plugin versions -->
         <build-helper-maven-plugin.version>3.6.2</build-helper-maven-plugin.version>
         <dependency-check-maven.version>13.0.0</dependency-check-maven.version>
-        <error-prone.version>2.50.0</error-prone.version>
+        <error-prone.version>2.51.0</error-prone.version>
         <extra-enforcer-rules.version>1.12.1</extra-enforcer-rules.version>
         <formatter-maven-plugin.version>2.29.0</formatter-maven-plugin.version>
         <impsort-maven-plugin.version>1.13.0</impsort-maven-plugin.version>
@@ -28,8 +28,8 @@
         <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
         <maven-site-plugin.version>3.22.0</maven-site-plugin.version>
         <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
-        <nullaway.version>0.14.2</nullaway.version>
+        <maven-surefire-plugin.version>3.6.1</maven-surefire-plugin.version>
+        <nullaway.version>0.14.3</nullaway.version>
 
         <!-- Dependency versions -->
         <lombok.version>1.18.48</lombok.version>
