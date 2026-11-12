@@ -12,7 +12,7 @@
 
     <properties>
         <!-- Plugin versions -->
-        <build-helper-maven-plugin.version>3.7.0</build-helper-maven-plugin.version>
+        <build-helper-maven-plugin.version>3.8.0</build-helper-maven-plugin.version>
         <dependency-check-maven.version>13.0.0</dependency-check-maven.version>
         <error-prone.version>2.52.0</error-prone.version>
         <extra-enforcer-rules.version>1.12.1</extra-enforcer-rules.version>
@@ -37,7 +37,7 @@
         <!-- Quarkus versions -->
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>3.40.1</quarkus.platform.version>
+        <quarkus.platform.version>3.40.1.2</quarkus.platform.version>
 
         <!-- Test dependency versions -->
         <truth.version>1.4.5</truth.version>
