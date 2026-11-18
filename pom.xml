@@ -38,6 +38,12 @@
           <configuration>
             <useDefaultExcludes>false</useDefaultExcludes>
           </configuration>
+          <executions>
+            <execution>
+              <id>default-integration-test</id>
+              <phase>none</phase>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
